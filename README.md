@@ -1,6 +1,6 @@
 # CTFbot v1.0 Template
 
-CTFbot v1.0 is a helpful discord chatbot based off the [Discord-Bot-Template]<https://github.com/Cisc0-gif/Discord-Bot-Template.git>
+CTFbot v1.0 is a helpful discord chatbot based off the [Discord-Bot-Template](<https://github.com/Cisc0-gif/Discord-Bot-Template.git>)
 
 ## Usage
 
