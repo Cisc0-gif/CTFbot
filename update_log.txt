@@ -1,0 +1,2 @@
+1/9/2020
+-finished version 1.0 of CTFbot with basic commands and functions
