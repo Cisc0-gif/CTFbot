@@ -12,7 +12,7 @@ Run ``` pip3 install -r requirements.txt ``` to install necessary libraries
 
 ## Built With
 
-* Python 3.7 - Programming Language Developed by [Python]<https://python.org>
+* Python 3.7 - Programming Language Developed by [Python](<https://python.org>)
 * GitHub - This Website!
 * Discord - Popular Gaming Chat and Voice Server
 
