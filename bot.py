@@ -7,7 +7,7 @@ import time
 
 client = discord.Client(command_prefix='/', description='Basic Commands')
 
-TOKEN = 'NjY1MDAzOTgzMzU3NjA3OTg3.XhfTRw.FLUtcKuYVHXIVZdfruBr3nUurO0'
+TOKEN = ''
 
 # Go To https://discordapp.com/developers/applications/ and start a new application for Token
 
