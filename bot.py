@@ -69,7 +69,7 @@ async def on_guild_channel_delete(channel):
 async def on_guild_channel_update(before, after):
     print("Channel Updated:", after)
 
-help_standard = ['help', 'start', 'begin', 'beginning', 'hint', 'hints', 'tip', 'tips']
+help_standard = ['help', 'start', 'begin', 'beginning']
 sql = ['sql', 'mysql', 'injection', '_', 'sql_injection']
 crack = ['hash', 'hashes', 'cracking', 'crack', 'bruteforce', 'dictionary', 'rule']
 upload = ['payload', 'upload', 'payloads', 'uploading', 'uploads', 'meterpreter']
