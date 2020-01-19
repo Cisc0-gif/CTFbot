@@ -162,6 +162,7 @@ async def on_message(message):
             await channel.send("--checking if there's a robots.txt file in web dir can help with dir traversal")
             await channel.send("--if /etc/knockd.conf present then look inside for 3 port #s, use this one liner to open a closed port: for x in PORT1 PORT2 PORT3; do nmap -Pn --max-retries 0 -p $x IP; done")
             await channel.send("--Google and question everything! Research services, programs, and exploits!")
+            await channel.send("--if target is running on wordpress or has wordpress plugins run: wpscan --url IP to scan for vulnerable plugins and enumerate")
 
     if message.content == "/nickname": #if author types /nickname bot asks for input for new nickname
         await channel.send("Type /name nicknamehere")
