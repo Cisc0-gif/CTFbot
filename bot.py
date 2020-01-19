@@ -116,7 +116,8 @@ async def on_message(message):
     for i in crack:
         if i in message.content.lower():
             await channel.send("Hash Cracking Methods:")
-            await channel.send("--john wordlist.txt hashes.txt")
+            await channel.send("--crunch min max charset > outfile.txt #generates wordlist")
+            await channel.send("--john --format=hash_type --wordlist=wordlist.txt hashes.txt")
             await channel.send("--hashcat -a 0 -m # wordlist/rule/mask hashes.txt")
             await channel.send("--https://crackstation.net/")
             await channel.send("--https://gchq.github.io/CyberChef/")
@@ -137,7 +138,8 @@ async def on_message(message):
         if i in message.content.lower():
             await channel.send("Privelege Escalation:")
             await channel.send("--sudo -l")
-            await channel.send("--try an enumeration script")
+            await channel.send("--if a user has sudo /bin/cp access and id_rsa.pub key generated in low priv user, cp ~/.ssh/id_rsa.pub /tmp/dir, mv id_rsa.pub authorized_key, chmod 777 authorized_key. Next use one liner sudo -u otheruser /bin/cp /tmp/dir/authorized_key /home/otheruser/.ssh. This will allow you to ssh under otheruser name with same ssh key")
+            await channel.send("--try an enumeration script; LinEnum.sh, Linpeas, etc.")
             await channel.send("--check metasploit for privesc exploit")
             break
 
