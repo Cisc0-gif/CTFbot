@@ -73,7 +73,7 @@ help_standard = ['help', 'start', 'begin', 'beginning']
 sql = ['sql', 'mysql', 'injection', '_', 'sql_injection']
 crack = ['hash', 'hashes', 'cracking', 'crack', 'bruteforce', 'dictionary', 'rule']
 upload = ['payload', 'upload', 'payloads', 'uploading', 'uploads', 'meterpreter']
-lpshell = ['low', 'privelege', 'low-privelege', 'escalate', 'escalation']
+lpshell = ['low', 'privelege', 'low-privelege', 'escalate', 'escalation', 'privesc']
 gits = ['tool', 'tools', 'extra', 'helpful', 'other']
 tips = ['hint', 'tip', 'hints', 'tips', 'helpful']
 
